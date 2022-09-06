@@ -19,8 +19,8 @@ def main():
 @app.route('/gravar', methods=['POST','GET'])
 def gravar():
   nome = request.form['nome']
-  email = request.form['cpf']
-  senha = request.form['endereco']
+  cpf = request.form['cpf']
+  endereco = request.form['endereco']
   if nome and cpf and endereco:
     conn = mysql.connect()
     cursor = conn.cursor()
